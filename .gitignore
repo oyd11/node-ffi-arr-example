@@ -2,8 +2,8 @@
 
 node_modules/
 .*~
-.sw?
-.o
+*.sw?
+*.o
 
 
 
