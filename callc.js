@@ -1,17 +1,17 @@
 
-var ref = require('ref');
-var ffi = require('ffi');
-var ArrayType = require('ref-array');
+let ref = require('ref');
+let ffi = require('ffi');
+let ArrayType = require('ref-array');
 
-var int = ref.types.int;
-var float = ref.types.float;
-var double = ref.types.double;
-var IntArray = ArrayType(int);
-var FloatArray = ArrayType(float);
-var DoubleArray = ArrayType(double);
+let int = ref.types.int;
+let float = ref.types.float;
+let double = ref.types.double;
+let IntArray = ArrayType(int);
+let FloatArray = ArrayType(float);
+let DoubleArray = ArrayType(double);
 
 
-var test_lib = ffi.Library('test_lib', {
+let test_lib = ffi.Library('test_lib', {
     'f': [ 'int', [ 'float', 'int' ] ],
     'arrFuncFloat': [ 'int', [ FloatArray, 'int' ] ],
     'arrFuncDouble': [ 'int', [ DoubleArray, 'int' ] ],
